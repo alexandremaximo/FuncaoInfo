@@ -27,14 +27,22 @@ namespace WebAtividadeEntrevista.Controllers
         {
             BoCliente bo = new BoCliente();
 
-            if (!this.ModelState.IsValid)
+
+            if (!this.ModelState.IsValid || bo.VerificarExistencia(model.CPF))
             {
                 List<string> erros = (from item in ModelState.Values
                                       from error in item.Errors
                                       select error.ErrorMessage).ToList();
 
                 Response.StatusCode = 400;
-                return Json(string.Join(Environment.NewLine, erros));
+                if (bo.VerificarExistencia(model.CPF))
+                {
+                    return Json("CPF já cadastrado na base de dados.");
+                }
+                else
+                {
+                    return Json(string.Join(Environment.NewLine, erros));
+                }
             }
             else
             {
@@ -50,7 +58,7 @@ namespace WebAtividadeEntrevista.Controllers
                     Nome = model.Nome,
                     Sobrenome = model.Sobrenome,
                     Telefone = model.Telefone,
-                    Cpf = model.Cpf
+                    CPF = model.CPF
                 });
 
 
@@ -62,15 +70,22 @@ namespace WebAtividadeEntrevista.Controllers
         public JsonResult Alterar(ClienteModel model)
         {
             BoCliente bo = new BoCliente();
-
-            if (!this.ModelState.IsValid)
+            
+            if (!this.ModelState.IsValid || (bo.VerificarExistencia(model.CPF) && model.CPF != bo.Consultar(model.Id).CPF))
             {
                 List<string> erros = (from item in ModelState.Values
                                       from error in item.Errors
                                       select error.ErrorMessage).ToList();
 
                 Response.StatusCode = 400;
-                return Json(string.Join(Environment.NewLine, erros));
+                if (bo.VerificarExistencia(model.CPF))
+                {
+                    return Json("CPF já cadastrado na base de dados.");
+                }
+                else
+                {
+                    return Json(string.Join(Environment.NewLine, erros));
+                }
             }
             else
             {
@@ -86,7 +101,7 @@ namespace WebAtividadeEntrevista.Controllers
                     Nome = model.Nome,
                     Sobrenome = model.Sobrenome,
                     Telefone = model.Telefone,
-                    Cpf = model.Cpf
+                    CPF = model.CPF
                 });
 
                 return Json("Cadastro alterado com sucesso");
@@ -113,7 +128,8 @@ namespace WebAtividadeEntrevista.Controllers
                     Nacionalidade = cliente.Nacionalidade,
                     Nome = cliente.Nome,
                     Sobrenome = cliente.Sobrenome,
-                    Cpf = model.Cpf
+                    Telefone = cliente.Telefone,
+                    CPF = cliente.CPF
                 };
 
 

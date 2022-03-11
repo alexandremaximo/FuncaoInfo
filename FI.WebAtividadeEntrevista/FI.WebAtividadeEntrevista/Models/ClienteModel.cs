@@ -70,6 +70,7 @@ namespace WebAtividadeEntrevista.Models
         /// <summary>
         /// CPF
         /// </summary>
-        public string Cpf { get; set; }
+        [Required]
+        public string CPF { get; set; }
     }    
 }
