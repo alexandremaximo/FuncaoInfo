@@ -184,7 +184,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
-    <Compile Include="Controllers\BeneficiarioController .cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -394,7 +393,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Views\Cliente\Beneficiarios\themes\styles.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -437,15 +435,6 @@
     <Content Include="Scripts\jtable\themes\basic\jtable_basic.less" />
     <Content Include="Views\Cliente\Alterar.cshtml" />
     <Content Include="Views\Cliente\Forms.cshtml" />
-    <Content Include="Views\Cliente\Beneficiarios\Beneficiarios.cshtml">
-      <BrowseToURL>~/Beneficiarios/Beneficiarios</BrowseToURL>
-    </Content>
-    <Content Include="Views\Cliente\Beneficiarios\Forms.cshtml">
-      <BrowseToURL>~/Beneficiarios/Forms</BrowseToURL>
-    </Content>
-    <Content Include="Views\Cliente\Beneficiarios\Index.cshtml">
-      <BrowseToURL>~/Beneficiarios/Index</BrowseToURL>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FI.AtividadeEntrevista\FI.AtividadeEntrevista.csproj">
