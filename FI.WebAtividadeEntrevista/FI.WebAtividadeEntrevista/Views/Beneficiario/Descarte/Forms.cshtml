@@ -1,0 +1,43 @@
+﻿<form id="formCadastro" method="post">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+    <script src="~/Scripts/funcoes.js"></script>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="CPF">CPF:</label>
+                <input required="required" type="text" class="form-control" id="CPF" name="CPF" placeholder="Ex.: 010.011.111-00" maxlength="14" onblur="validar_CPF(this)">
+                <!--Inclusão da máscara de CPF-->
+                <script type="text/javascript">
+                    $("#CPF").mask("000.000.000-00");
+                </script>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <label for="Nome">Nome:</label>
+                <input required="required" type="text" class="form-control" id="Nome" name="Nome" placeholder="Ex.: João" maxlength="50">
+            </div>
+        </div>
+
+        <div class="col-sm-1">
+            <div class="pull-right">
+                @Html.ActionLink("Incluir", "Index", "Beneficiario", new { }, new { @class = "btn btn-sm btn-success" })
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="pull-right">
+
+                <input type="button" class="btn btn-sm btn-default" id="Benef" name="Benef" value="Fechar" onclick="window.close()">
+
+            </div>
+        </div>
+    </div>
+</form>

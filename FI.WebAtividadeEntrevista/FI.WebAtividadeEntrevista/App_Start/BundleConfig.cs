@@ -34,11 +34,11 @@ namespace WebAtividadeEntrevista
                       "~/Scripts/Clientes/FI.AltClientes.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/Beneficiarios").Include(
-                     "~/Scripts/Clientes/FI.Beneficiarios.js"));
+                    "~/Scripts/Beneficiarios/FI.Beneficiarios.js"));
             bundles.Add(new ScriptBundle("~/bundles/listBeneficiarios").Include(
-          "~/Scripts/Clientes/FI.ListBeneficiarios.js"));
+          "~/Scripts/Beneficiarios/FI.ListBeneficiarios.js"));
             bundles.Add(new ScriptBundle("~/bundles/altBeneficiarios").Include(
-                      "~/Scripts/Clientes/FI.AltBeneficiarios.js"));
+                      "~/Scripts/Beneficiarios/FI.AltBeneficiarios.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
