@@ -12,7 +12,7 @@ namespace WebAtividadeEntrevista
                         "~/Scripts/jquery-{version}.js"));
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
-            
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -29,9 +29,16 @@ namespace WebAtividadeEntrevista
             bundles.Add(new ScriptBundle("~/bundles/clientes").Include(
                       "~/Scripts/Clientes/FI.Clientes.js"));
             bundles.Add(new ScriptBundle("~/bundles/listClientes").Include(
-                      "~/Scripts/Clientes/FI.ListClientes.js"));
+          "~/Scripts/Clientes/FI.ListClientes.js"));
             bundles.Add(new ScriptBundle("~/bundles/altClientes").Include(
                       "~/Scripts/Clientes/FI.AltClientes.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/Beneficiarios").Include(
+                     "~/Scripts/Clientes/FI.Beneficiarios.js"));
+            bundles.Add(new ScriptBundle("~/bundles/listBeneficiarios").Include(
+          "~/Scripts/Clientes/FI.ListBeneficiarios.js"));
+            bundles.Add(new ScriptBundle("~/bundles/altBeneficiarios").Include(
+                      "~/Scripts/Clientes/FI.AltBeneficiarios.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
