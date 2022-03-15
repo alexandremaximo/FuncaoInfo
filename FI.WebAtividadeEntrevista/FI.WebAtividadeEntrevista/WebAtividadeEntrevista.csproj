@@ -441,7 +441,6 @@
     <Content Include="Views\Cliente\Incluir.cshtml" />
     <Content Include="Views\Cliente\Alterar.cshtml" />
     <Content Include="Views\Beneficiario\Alterar.cshtml" />
-    <Content Include="Views\Beneficiario\Descarte\Forms.cshtml" />
     <Content Include="Views\Beneficiario\Incluir.cshtml" />
     <Content Include="Views\Beneficiario\Index.cshtml" />
     <Content Include="Views\Beneficiario\Forms.cshtml" />

@@ -1,8 +1,5 @@
 ﻿$(document).ready(function () {
-
-    if (document.getElementById("gridBeneficiarios"))
         $('#gridBeneficiarios').jtable({
-            title: 'Beneficiarios',
             paging: true, //Enable paging
             pageSize: 5, //Set page size (default: 10)
             sorting: true, //Enable sorting
@@ -11,13 +8,13 @@
                 listAction: urlBeneficiarioList,
             },
             fields: {
-                Nome: {
-                    title: 'Nome',
-                    width: '35%'
-                },
                 CPF: {
                     title: 'CPF',
-                    width: '35%'
+                    width: '15%'
+                },
+                Nome: {
+                    title: 'Nome',
+                    width: '15%'
                 },
                 Alterar: {
                     title: '',

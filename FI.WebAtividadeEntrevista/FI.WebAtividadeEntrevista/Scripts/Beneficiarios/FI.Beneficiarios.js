@@ -6,8 +6,9 @@ $(document).ready(function () {
             url: urlPost,
             method: "POST",
             data: {
-                "NOME": $(this).find("#Nome").val(),
-                "CPF": $(this).find("#CPF").val()
+                "CPF": $(this).find("#CPF").val(),
+                "Nome": $(this).find("#Nome").val()
+
             },
             error:
                 function (r) {

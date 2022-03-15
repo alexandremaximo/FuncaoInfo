@@ -1,7 +1,8 @@
-﻿function validar_CPF(CPF) {
+﻿import '..\Controllers';
 
+function validar_CPF(CPF) {
     var strCPF = document.getElementById("CPF").value;
-
+    
     if (strCPF != "") {
         strCPF = limpaCPF(strCPF);
         if (!TestaCPF(strCPF)) {
